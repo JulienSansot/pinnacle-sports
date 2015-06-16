@@ -1,6 +1,6 @@
 {
   "name": "pinnacle-sports",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pinnacle Sports API",
   "main": "app.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "betting"
   ],
   "author": "Julien Sansot",
-  "license": "ISC",  
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git://github.com/Kalagan/pinnacle-sports.git"
