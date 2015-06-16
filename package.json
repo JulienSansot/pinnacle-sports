@@ -1,0 +1,22 @@
+{
+  "name": "pinnacle-sports",
+  "version": "0.1.0",
+  "description": "Pinnacle Sports API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pinnacle",
+    "sports",
+    "json",
+    "api",
+    "betting"
+  ],
+  "author": "Julien Sansot",
+  "license": "ISC",
+  "dependencies": {
+    "q": "^1.4.1",
+    "request": "^2.57.0"
+  }
+}
