@@ -14,7 +14,11 @@
     "betting"
   ],
   "author": "Julien Sansot",
-  "license": "ISC",
+  "license": "ISC",  
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Kalagan/pinnacle-sports.git"
+  },
   "dependencies": {
     "q": "^1.4.1",
     "request": "^2.57.0"
