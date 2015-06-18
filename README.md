@@ -1,9 +1,9 @@
 Pinnacle Sports API for Node.js
 ================================================
 
-This is a node module to use the Pinnacle Sports API [https://www.pinnaclesports.com](https://www.pinnaclesports.com)
+This is a node module to use the Pinnacle Sports API <https://www.pinnaclesports.com>
 
-API's documentation : [http://www.pinnaclesports.com/en/api/manual](http://www.pinnaclesports.com/en/api/manual)
+API's documentation : <http://www.pinnaclesports.com/en/api/manual>
 
 
 ## Usage ##
