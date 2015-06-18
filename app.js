@@ -112,10 +112,11 @@ function PinnacleSportsClient(username, password){
 	this.auth = 'Basic ' + new Buffer(username + ':' + password).toString('base64');
 }
 
+
 //applying all the operations function to the PinnacleSportsClient object
 operations.forEach(function(operation){
 
-	PinnacleSportsClient.prototype[operation.name] = function (options) {
+	PinnacleSportsClient.prototype[operation.name] = function (options, callback) {
 
 		var url = pinnacle_api_url + operation.endpoint;
 
@@ -123,8 +124,18 @@ operations.forEach(function(operation){
 			this.post(url, options) :
 			this.get(url, options) ;
 
+
 		if(operation.map){
-			return result.then(operation.map);
+			result = result.then(operation.map);
+		}
+
+		if(callback && typeof(callback) === 'function'){
+			result.then(function(result){
+				callback(null, result);
+			})
+			.catch(function(err){
+				callback(err);
+			})
 		}
 
 		return result;
@@ -142,6 +153,8 @@ exports.createClient = function(username, password){
 
 	return new PinnacleSportsClient(username, password);
 };
+
+exports.create_client = exports.createClient;
 
 //sending a post request to the API
 PinnacleSportsClient.prototype.post = function(url, options){
@@ -175,6 +188,8 @@ PinnacleSportsClient.prototype.post = function(url, options){
 	return deferred.promise;
 };
 
+
+// sending a get request to the API
 PinnacleSportsClient.prototype.get = function(url, options){
 	var deferred = Q.defer();
 
@@ -210,7 +225,7 @@ function processResponse(error, body){
 	}
 	else if(body == ''){
 		//the API returned an empty response.
-		//it happens on some requests when it's to often.
+		//it happens on some requests when it's too often.
 		//for example it happens often on get_fixtures
 		deferred.reject('EMPTY_RESPONSE');
 	}

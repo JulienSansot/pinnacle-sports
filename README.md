@@ -43,14 +43,20 @@ var options = {
   sportid: 29
 };
 
+client.get_fixtures(options, function(error, result){
+  console.log(error);
+  console.log(result);
+});
+
+// you can also use it as a promise if you prefer
 client.get_fixtures(options)
 .then(function(result){
-    console.log(result);
+  console.log(result);
 })
 .catch(function(error){
-    console.log(error);
+  console.log(error);
 });
 ```
 
 
-for the list of possible options for each operation please see the documentation : <http://www.pinnaclesports.com/en/api/manual>
+for the list of possible options for each operation please see the documentation on the Pinnacle Sports website : <http://www.pinnaclesports.com/en/api/manual>
