@@ -17,16 +17,24 @@ var pinnacle_sports = require('pinnacle-sports');
 var client = pinnacle_sports.createClient('username', 'password');
 ```
 
-At the moment, the operations implemented are these ones :
-- get_sports
-- get_leagues
-- get_fixtures
-- get_odds
-- get_currencies
-- get_client_balance
+All the operations from the API are implemented :
+* get_sports
+* get_leagues
+* get_feed
+* get_fixtures
+* get_odds
+* get_currencies
+* get_client_balance
+* place_bet
+* place_parlay_bet
+* get_line
+* get_parlay_line
+* get_bets
+* get_inrunning
+* get_translations
 
 
-You would use an operation like this :
+You use an operation like this :
 ```JavaScript
 
 //this example will request all soccer fixtures
