@@ -1,7 +1,7 @@
 Pinnacle Sports API for Node.js
 ================================================
 
-This is a node module to use the Pinnacle Sports API <https://www.pinnaclesports.com>
+A node module to use the Pinnacle Sports API <https://www.pinnaclesports.com>
 
 API's documentation : <http://www.pinnaclesports.com/en/api/manual>
 
@@ -17,43 +17,32 @@ var pinnacle_sports = require('pinnacle-sports');
 var client = pinnacle_sports.createClient('username', 'password');
 ```
 
-Request list of sports
-```JavaScript
+At the moment, the operations implemented are these ones :
+- get_sports
+- get_leagues
+- get_fixtures
+- get_odds
+- get_currencies
+- get_client_balance
 
-//this example will request all sports
 
-//for the list of possible options,
-//see the documentation : http://www.pinnaclesports.com/en/api/manual#Gsports
-
-var options = {};
-
-client.getSports(options)
-.then(function(result){
-    console.log(result);
-})
-.catch(function(error){
-    console.log(error);
-});
-```
-
-Request fixtures
+You would use an operation like this :
 ```JavaScript
 
 //this example will request all soccer fixtures
 
-//for the list of possible options,
-//see the documentation : http://www.pinnaclesports.com/en/api/manual#GetFixtures
-
 var options = {
-  sportId: 29
+  sportid: 29
 };
 
-client.getFixtures(options)
+client.get_fixtures(options)
 .then(function(result){
     console.log(result);
 })
 .catch(function(error){
     console.log(error);
 });
-
 ```
+
+
+for the list of possible options for each operation please see the documentation : <http://www.pinnaclesports.com/en/api/manual>
