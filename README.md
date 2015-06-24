@@ -6,6 +6,10 @@ A node module to use the Pinnacle Sports API <https://www.pinnaclesports.com>
 API's documentation : <http://www.pinnaclesports.com/en/api/manual>
 
 
+## Installation ##
+
+    npm install pinnacle-sports
+
 ## Usage ##
 
 Creating a client
