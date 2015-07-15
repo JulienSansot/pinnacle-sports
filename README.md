@@ -1,6 +1,9 @@
 Pinnacle Sports API for Node.js
 ================================================
 
+  [![NPM Version][npm-image]][npm-url]
+  [![NPM Downloads][downloads-image]][downloads-url]
+
 A node module to use the Pinnacle Sports API <https://www.pinnaclesports.com>
 
 API's documentation : <http://www.pinnaclesports.com/en/api/manual>
@@ -27,6 +30,7 @@ All the operations from the API are implemented :
 * get_feed
 * get_fixtures
 * get_odds
+* get_parlay_odds
 * get_currencies
 * get_client_balance
 * place_bet
@@ -64,3 +68,8 @@ client.get_fixtures(options)
 
 
 for the list of possible options for each operation please see the documentation on the Pinnacle Sports website : <http://www.pinnaclesports.com/en/api/manual>
+
+[npm-image]: https://img.shields.io/npm/v/pinnacle-sports.svg
+[npm-url]: https://npmjs.org/package/pinnacle-sports
+[downloads-image]: https://img.shields.io/npm/dm/pinnacle-sports.svg
+[downloads-url]: https://npmjs.org/package/pinnacle-sports

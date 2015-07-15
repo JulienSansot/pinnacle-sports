@@ -57,6 +57,10 @@ var operations = [
 		endpoint: 'odds'
 	},
 	{
+    name: 'get_parlay_odds',
+    endpoint: 'odds/parlay'
+	},
+	{
 		name: 'get_currencies',
 		endpoint: 'currencies',
 		map: function(result){
@@ -80,7 +84,7 @@ var operations = [
 	},
 	{
 		name: 'place_parlay_bet',
-		endpoint: '/bets/parlay',
+		endpoint: 'bets/parlay',
 		type: 'post'
 	},
 	{
