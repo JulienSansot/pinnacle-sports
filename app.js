@@ -219,7 +219,7 @@ PinnacleSportsClient.prototype.get = function(url, options){
 
 
 //process the response returned by the API
-function processResponse(error, body){	
+function processResponse(error, body){
 
 	var deferred = Q.defer();
 
@@ -245,7 +245,7 @@ function processResponse(error, body){
 			parseString(body, function (err, json_result) {
 				if(err){
 					//the result is neither valid JSON nor XML
-					deferred.reject('couldn\'t parse result');
+					deferred.reject('couldn\'t parse result: \n' + body);
 				}
 				else{
 
@@ -268,7 +268,7 @@ function processResponse(error, body){
 
 		if(result == null){
 			//the result is neither valid JSON nor XML
-			deferred.reject('couldn\'t parse result');
+			deferred.reject('couldn\'t parse result: \n' + body);
 		}
 		else{
 
