@@ -73,3 +73,6 @@ for the list of possible options for each operation please see the documentation
 [npm-url]: https://npmjs.org/package/pinnacle-sports
 [downloads-image]: https://img.shields.io/npm/dm/pinnacle-sports.svg
 [downloads-url]: https://npmjs.org/package/pinnacle-sports
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Kalagan/pinnacle-sports/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
